@@ -5082,9 +5082,6 @@ function execCmd(cmdStr,speaker,store)
 						local success,err = pcall(function()
 							cmd.FUNC(args, speaker)
 						end)
-						if not success and _G.IY_DEBUG then
-							warn("Command Error:", cmdName, err)
-						end
 						if cmdDelay ~= 0 then wait(cmdDelay) end
 					end
 				end
